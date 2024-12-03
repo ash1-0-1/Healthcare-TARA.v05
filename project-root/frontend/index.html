@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CySec Assure</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="background-container">
+        <img src="{{ url_for('static', filename='CySecAssureBG.jpeg') }}" alt="Background" class="background-image">
+        
+        <!-- Transparent overlay centered on the screen -->
+        <div class="overlay">
+            <!-- Dropdown for Asset Selection -->
+            <div class="dropdown-container">
+                <select id="assetDropdown" class="dropdown">
+                    <option>Select Asset</option>
+                </select>
+            </div>
+
+            <!-- Input Fields and Controls -->
+            <div class="input-fields">
+                <div id="existingControlsContainer"></div>
+
+                <input type="text" id="actionOwner" placeholder="Action Owner">
+                <input type="date" id="plannedCompletionDate" placeholder="Planned Action Completion Date">
+                <input type="text" id="actionStatus" placeholder="Action Status">
+                <input type="text" id="riskStatus" placeholder="Risk Status">
+                <input type="date" id="riskIdentificationDate" placeholder="Risk Identification Date">
+                <input type="date" id="riskAddressedDate" placeholder="Risk Addressed Date">
+                <input type="text" id="reviewedBy" placeholder="Reviewed and Accepted By">
+                <textarea id="remarks" placeholder="Remarks"></textarea>
+                <input type="date" id="nextReviewDate" placeholder="Next Review Date">
+
+                <div class="button-group">
+                    <button id="saveAssetButton" class="btn">Save Asset</button>
+                    <button id="generateReportButton" class="btn">Generate Report</button>
+                </div>
+            </div>
+
+            <!-- Right-side panel to show saved assets -->
+            <div id="savedAssetsPanel" class="saved-assets-panel">
+                <h5>Saved Assets</h5>
+                <ul id="savedAssetsList"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
+

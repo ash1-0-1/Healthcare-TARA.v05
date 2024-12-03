@@ -1,0 +1,32 @@
+Now, I will describe the front-end to you and also tell you the backend functionalities.
+On the front end, first of all, it should be scalable as I will add more functionalities later on which has to be linked to backend.
+First of all, I need a futuristic and well designed front-end with a-lot of animations. There will be a background image named CySecAssureBG.jpeg in static directory.
+Then, I need the background to be covered with a white 75% transparent film leaving some border. The film needs to be center and middle aligned and background should be visible clearly under the white film. The backgound should remain static even when we have to scroll on the white film.
+
+Next, I need a nested dropdown box in the top-centre of the film. Make it 60% transparent white color such that it's visible over the film and doesn't cover the background image completely. There should be a text 'Select Assets' on the dropdown box.
+In the dropdown menu, there should be a list of collection names from the mongoDB database 'CySecAssureDB'. Inside each list item in the drop down, there should be a nested list of every single 'Asset Name' inside the collection. In the collections, data of objects is filled and we need the list of 'Asset Name' in the nested dropdown menu of the collection. User should be able to select the asset and the asset name should be stored as a part of the list.
+Next, once the user has selected the asset, There should appear the following separate Input Boxes below the drop down field:
+1. Existing controls (This is a drop down input field. The drop down list should contain the list of effective_controls from the collection named 'SecurityControls'. For example, if the asset is selected from the collection '1. Cloud Infrastructure and Compute Services', then look for the classification named '1. Cloud Infrastructure and Compute Services' in 'SecurityControls' collection and give the list of 'effective_controls' corresponding to that classification. The effective_controls all should have a checkbox in front of them and user should be allowed to select and deselect multiple boxes.)
+
+2. Action Owner: An input box with back text 'Action Owner' and store the input as it will later be used in backend.
+
+3. Planned Action Completion Date: Give a calender here and store the input.
+
+4. Action Status: Store the input.
+
+5. Risk Status: Store the input.
+
+6. Risk Identification Date: store the input
+
+7. Risk Addressed Date: Store the Input.
+
+8. Reviewed and Accepted By: Store the Input.
+
+9. Remarks: Store the input.
+
+10. Next Review Date: give a calender and store the input.
+
+Give a 'Save Asset' button which, when clicked, will save this asset data,
+give a Generate report button for generating the report (We will add it's functionality later.), and add another button that appears after saving asset data - 'Add Asset' button that will bring us back to the same page where we can add another asset in a similar way.
+Also add a 'Same As Previous' button starting from 2nd asset onwards which will copy the data from input fields Action Owner to Next Review Date in the input fields. Existing controls still need to be filled manually.
+Also, on the right side, give a panel where we can see the 'Asset Names' that have been added.

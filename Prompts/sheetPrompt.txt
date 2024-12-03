@@ -1,0 +1,20 @@
+In the same directory as this code, there is an excel sheet template named 'CySecAssure Template [QR-059-RMP (Risk Management Plan Template)]'. Copy this template and make a new sheet/tab at the end of other sheets/tabs named 'Risk Assessment'.
+In the Risk Assessment sheet,
+
+Merge cells A1:F1. Add text 'Risk Assessment & Risk Treatment Plan', Size 14, White color, bold Arial Font, Center and middle alignment. Make the merged cell size longer and wider. Colour of cell: 31869b, add thin borders around the merged cell.
+
+In Cell G1, Add text 'Unique RA&RTP #: ', size 10, color black, bold font arial, left middle alignment, make the column longer in height and wider. Cell color 31869b, add thin borders to the cell.
+
+In Cell A2, Add text 'Account / Funtion Name: ', size 10, color black, bold font arial, left middle alignment, make the column longer in height. Cell color b7dee8, add thin borders to the cell.
+
+In Cell C2, Add text 'SPOC (with Emp ID) for Tracking and Addressing the Risk: ', size 10, color black, bold font arial, left middle alignment, make the column longer in height. Cell color b7dee8, add thin borders to the cell.
+
+In Cell G2, Add text 'Acceptable Risk Level ', size 10, color black, bold font arial, left middle alignment, make the column longer in height. Cell color b7dee8, add thin borders to the cell.
+
+Merge cells D3:F3 and merge cells D2:F2
+
+In Cell A3, Add text 'Project / Function ID (if Applicable): ', size 10, color black, bold font arial, left middle alignment, make the column longer in height. Cell color b7dee8, add thin borders to the cell.
+
+In Cell C3, Add text 'Name of Risk Owner ', size 10, color black, bold font arial, left middle alignment, make the column longer in height. Cell color b7dee8, add thin borders to the cell.
+
+In Cell G3, Add text 'Last Updated on: ', size 10, color black, bold font arial, left middle alignment, make the column longer in height. Cell color b7dee8, add thin borders to the cell.

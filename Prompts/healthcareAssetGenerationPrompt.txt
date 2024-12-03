@@ -1,0 +1,30 @@
+"Generate a detailed Threat Analysis and Risk Assessment (TARA) report for the following healthcare asset: . Generate the output in SQL format that can be directly pasted into an excel sheet.
+ 
+Fill in the data with the following details:
+ 
+1. Asset Details:
+   - Risk ID: Use format 'R0001'
+   - Asset ID: Use format 'A0001'
+   - Asset Group_Asset Name: [Insert Asset Name]
+
+2. Asset Valuation(CIA):
+   - Impact on Confidentiality 3-H, 2-M, 1-L: [Insert Confidentiality Rating from 1, 2, 3 where 1 is low, 2 is medium and 3 is high]
+   - Impact on Integrity 3-H, 2-M, 1-L: [Insert Integrity Rating from 1, 2, 3 where 1 is low, 2 is medium and 3 is high]
+   - Impact on Availability 3-H, 2-M, 1-L: [Insert Availability Rating from 1, 2, 3 where 1 is low, 2 is medium and 3 is high]
+ 
+3. Risks Identification , Analysis, and Evaluation:
+   - Threat: [Give as many threats as possible, make them short and precise and index them with numbers like 1., 2., 3. ...]
+   - Vulnerabilities: [Give as many vulnerabilities as possible, make them 1 liner and precise and index them with numbers like 1., 2., 3. ...]
+   - Risk: [Give as many risks as possible, make them short and precise and index them with numbers like 1., 2., 3. ...]
+   - Impact: [High, Medium, Low (Calculate based on ISO 14971 Standards)]
+   
+3. Risk Treatment:
+   - Risk Treatment Category⭐️
+   - Actions or Additional controls taken to minimise the risk
+(Mandatory for Risk Exposure =>9): [Give as many actions as possible, make them 1 liner and precise and index them with numbers like 1., 2., 3. ...]
+   - Revised Probability, After Implemeting Countermeasure/s or Additional Safeguards: [High, Medium, Low]
+   - Revised Impact: [High,Medium, Low]
+   
+   
+Ensure all details are as practically possible and aligned with ISO 14971 Standards.
+
