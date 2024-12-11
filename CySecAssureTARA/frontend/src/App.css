@@ -1,0 +1,232 @@
+/* Overlay Container */
+.overlay {
+  background-color: rgba(255, 255, 255, 0.9);
+  width: 80vw;
+  height: 80vh;
+  border-radius: 10px;
+  display: flex;
+  padding: 20px;
+  gap: 20px; /* Space between left and right panels */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Left Panel - Dropdown and Input Form */
+.left-panel {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  padding-right: 10px;
+}
+
+.dropdown {
+  margin-bottom: 20px;
+}
+
+.dropdown label {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.dropdown select {
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: #f8f8f8;
+  color: #333;
+}
+
+/* Form Container with 2 Columns */
+.form-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 30px; /* Row gap of 20px and column gap of 30px */
+  margin-bottom: 20px;
+}
+
+.form-container .input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container .input-group label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-container .input-group input {
+  padding: 8px; /* Slightly smaller padding for smaller input size */
+  font-size: 0.9em;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: #f8f8f8;
+  width: 100%;
+}
+
+/* Checkbox Group for "Same As Previous" */
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between label and checkbox */
+}
+
+.checkbox-group label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+/* Add Asset Button */
+.button-container {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.add-asset-button {
+  background-color: #435d67;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 1em;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%; /* Spans across left half of overlay */
+}
+
+.add-asset-button:hover {
+  background-color: #2b3c46;
+}
+
+/* Right Panel - Saved Asset Panel */
+.right-panel {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+  gap: 20px; /* Space between elements in the right panel */
+}
+
+/* Saved Asset Panel */
+.asset-list-panel {
+  flex-grow: 1;
+  background-color: rgba(67, 93, 103, 0.1);
+  padding: 15px;
+  border-radius: 10px;
+  overflow-y: auto;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.asset-list-panel h2 {
+  font-size: 1.4em;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.asset-list-panel ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.asset-list-panel li {
+  font-size: 1em;
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.asset-list-panel li:hover {
+  background-color: #f0f0f0;
+}
+
+.asset-list-panel li:last-child {
+  border-bottom: none;
+}
+
+/* Generate Report Button Positioned Below Saved Asset Panel */
+.generate-report-container {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.generate-report-button {
+  background-color: #435d67;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 1em;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%; /* Spans across right half of overlay */
+}
+
+.generate-report-button:hover {
+  background-color: #2b3c46;
+}
+
+/* Existing Controls Popup */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.popup-content {
+  background: #fff;
+  padding: 20px;
+  width: 300px;
+  max-width: 90%;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.popup-content h3 {
+  margin-top: 0;
+  font-size: 1.1em;
+  color: #333;
+}
+
+.popup-content .control-option {
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.popup-content .control-option label {
+  margin-left: 8px;
+  color: #555;
+  font-size: 0.9em;
+}
+
+.popup-content button {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-size: 1em;
+  cursor: pointer;
+  background-color: #435d67;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.popup-content button:hover {
+  background-color: #333;
+}
+

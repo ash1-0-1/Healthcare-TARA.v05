@@ -1,0 +1,251 @@
+/* Body - Fix scrolling */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden; /* Prevent scrolling */
+}
+
+/* Background container - Full screen for background */
+.background {
+  width: 100vw; /* Fit the entire viewport width */
+  height: 100vh; /* Fit the entire viewport height */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center; /* Centers the overlay horizontally */
+  align-items: center; /* Centers the overlay vertically */
+  overflow: hidden; /* Prevent scrolling within the background */
+}
+
+/* Overlay stays fixed in the center */
+.overlay {
+  background-color: rgba(255, 255, 255, 0.9);
+  width: 80vw; /* Keeps the white overlay at a fixed width */
+  height: 80vh; /* Keeps the white overlay at a fixed height */
+  border-radius: 10px;
+  display: flex;
+  padding: 20px;
+  gap: 20px; /* Space between left and right panels */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  position: fixed; /* Fixes the overlay in the center of the viewport */
+}
+
+/* Left Panel - Dropdown and Input Form */
+.left-panel {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  padding-right: 10px;
+}
+
+/* Dropdown styles */
+.dropdown-menu {
+  margin-bottom: 20px;
+}
+
+.dropdown-menu button {
+  background-color: #435d67;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 1em;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.dropdown-menu button:hover {
+  background-color: #2b3c46;
+}
+
+.dropdown-list {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: white;
+  max-height: 150px;
+  overflow-y: auto;
+  margin-top: 5px;
+  padding: 10px;
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.dropdown-item input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+/* Input fields styling */
+.asset-form label {
+  font-size: 1em;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.asset-form input[type="text"],
+.asset-form input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: #f8f8f8;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* Add Asset Button */
+.asset-form button {
+  background-color: #435d67;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 1em;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.asset-form button:hover {
+  background-color: #2b3c46;
+}
+
+/* Right Panel - Saved Asset Panel */
+.right-panel {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+  gap: 20px; /* Space between elements in the right panel */
+}
+
+/* Saved Asset Panel */
+.asset-list-panel {
+  flex-grow: 1;
+  background-color: rgba(67, 93, 103, 0.1);
+  padding: 15px;
+  border-radius: 10px;
+  overflow-y: auto;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.asset-list-panel h2 {
+  font-size: 1.4em;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.asset-list-panel ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.asset-list-panel li {
+  font-size: 1em;
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+  color: #333;
+}
+
+.asset-list-panel li:hover {
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+.asset-list-panel li:last-child {
+  border-bottom: none;
+}
+
+/* Generate Report Button Positioned Below Saved Asset Panel */
+.generate-report-container {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.generate-report-button {
+  background-color: #435d67;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 1em;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%; /* Spans across right half of overlay */
+}
+
+.generate-report-button:hover {
+  background-color: #2b3c46;
+}
+
+/* Existing Controls Popup */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.popup-content {
+  background: #fff;
+  padding: 20px;
+  width: 300px;
+  max-width: 90%;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.popup-content h3 {
+  margin-top: 0;
+  font-size: 1.1em;
+  color: #333;
+}
+
+.popup-content .control-option {
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.popup-content .control-option label {
+  margin-left: 8px;
+  color: #555;
+  font-size: 0.9em;
+}
+
+.popup-content button {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-size: 1em;
+  cursor: pointer;
+  background-color: #435d67;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.popup-content button:hover {
+  background-color: #333;
+}
