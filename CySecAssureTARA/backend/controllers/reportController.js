@@ -24,6 +24,7 @@ const generateReport = async (req, res) => {
         }
 
         let currentRow = 7;
+        let serialNo = 1; // Start serial number from 1
 
         for (const assetData of assetList) {
             const { assetName, actionOwner, riskIdentificationDate, existingControls, additionalControls } = assetData;
@@ -49,7 +50,7 @@ const generateReport = async (req, res) => {
             }
 
             // Populate Excel worksheet, omitting or shifting data as specified
-            worksheet.getCell(`A${currentRow}`).value = dbData?.['Risk ID'] || 'Data Not Found';
+            worksheet.getCell(`A${currentRow}`).value = serialNo++; // Serial Number
             worksheet.getCell(`B${currentRow}`).value = dbData?.['Asset ID'] || 'Data Not Found';
             worksheet.getCell(`C${currentRow}`).value = assetName || 'Asset Not Found';
             worksheet.getCell(`D${currentRow}`).value = dbData?.['Impact on Confidentiality'] || 'Data Not Found';
@@ -83,8 +84,7 @@ const generateReport = async (req, res) => {
             // Fetch and populate Impact in N column
             worksheet.getCell(`N${currentRow}`).value = dbData?.['Impact'] || 'Data Not Found';
 
-            // Skip M, O, and P columns
-            worksheet.getCell(`Q${currentRow}`).value = dbData?.['Priority for Risk Treatment'] || 'Data Not Found';
+            // Skip M, O, P, and Q columns
             worksheet.getCell(`R${currentRow}`).value = dbData?.['Risk Treatment Category'] || 'Data Not Found';
             worksheet.getCell(`S${currentRow}`).value = additionalControls && additionalControls.length > 0 
                 ? additionalControls.join('\n') 
